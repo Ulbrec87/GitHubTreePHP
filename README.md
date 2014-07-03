@@ -159,7 +159,7 @@ $branch = $gt->repo("some_name")->branch("gh-pages");
 
 Once you have instantiated a `$branch` object, you can either create the actual branch on GitHub, delete it or make it the default branch of `$repo`:
 
-##### create( [function $callback] )
+##### `create( [function $callback] )`
 
 ```
 $branch->create(function($err, $code, $res){
@@ -167,7 +167,7 @@ $branch->create(function($err, $code, $res){
 });
 ```
 
-##### delete( [function $callback] )
+##### `delete( [function $callback] )`
 
 ```
 $branch->delete(function($err, $code, $res){
@@ -175,7 +175,7 @@ $branch->delete(function($err, $code, $res){
 });
 ```
 
-##### makeDefault( [function $callback] )
+##### `makeDefault( [function $callback] )`
 
 ```
 $branch->makeDefault(function($err, $code, $res){
@@ -193,21 +193,21 @@ A file object can be accessed through a `$branch` object (itself accessible thro
 $file = $gt->repo("some_name")->branch("gh-pages")->file("README.md");
 ```
 
-Once you have instantiated a `$file` object, you can either create the actual file on GitHub or delete it. For each action, you have the possibility to add a commit message.
+Once you have instantiated a `$file` object, you can either create the actual file on GitHub (and add content to it) or delete it. For each action, you have the possibility to add a commit message.
 
-##### content( string $content )
+##### `content( string $content )`
 
 ```
 $file->content("Hello!");
 ```
 
-##### commit( string $content )
+##### `commit( string $content )`
 
 ```
 $file->commit("init");
 ```
 
-##### create( function $callback )
+##### `create( function $callback )`
 
 ```
 $file->create(function($err, $code, $res){
@@ -215,7 +215,7 @@ $file->create(function($err, $code, $res){
 });
 ```
 
-##### delete( function $callback )
+##### `delete( function $callback )`
 
 ```
 $file->delete(function($err, $code, $res){
