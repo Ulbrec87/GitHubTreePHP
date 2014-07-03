@@ -1,5 +1,7 @@
 # GitHubTree.php 
 
+v0.1.0
+
 A powerful PHP library to manage files on GitHub.
 
 ## Intro
@@ -72,12 +74,6 @@ $repo->branch("gh-pages")->create();
 $repo->branch("master")->delete();
 ```
 
-Which is the same as:
-
-```
-$repo->branch("gh-pages")->create()->branch("master")->delete();
-```
-
 With callbacks:
 
 ```
@@ -117,7 +113,7 @@ $file = $gt->repo("repo_name")->branch("gh-pages")->file("HELLO.md");
 // Commit, add content, and then push the instance on GitHub
 $file->commit("some commit message")->content("I am the HELLO file")->create();
 
-// We could also delete the file
+// Later, we could also delete the file
 $file->commit("delete the file")->delete();
 ```
 
@@ -197,7 +193,7 @@ A file object can be accessed through a `$branch` object (itself accessible thro
 $file = $gt->repo("some_name")->branch("gh-pages")->file("README.md");
 ```
 
-Once you have instantiated a `$file` object, you can either create the actual file on GitHub, update it or delete it. For each action, you have the possibility to add a commit message.
+Once you have instantiated a `$file` object, you can either create the actual file on GitHub or delete it. For each action, you have the possibility to add a commit message.
 
 ##### content( string $content )
 
