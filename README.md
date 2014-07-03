@@ -2,7 +2,7 @@
 
 v0.1.0
 
-A powerful PHP library to manage files on GitHub.
+A powerful PHP library to manage files on GitHub. That's what we use on [The Pastry Box Project](https://the-pastry-box-project.net) to synchronize our content with GitHub.
 
 ## Intro
 
